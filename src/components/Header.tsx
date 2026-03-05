@@ -53,7 +53,7 @@ export default function Header() {
             
             <div className="flex-1 flex justify-center gap-7 text-[13px] font-semibold uppercase tracking-[0.18em] items-center text-slate-300">
               <Link to="/" className="hover:text-blue-400 transition-colors">Trang chủ</Link>
-              <a href="#about" className="hover:text-blue-400 transition-colors">Giới thiệu</a>
+              <Link to={{ pathname: '/', hash: '#about' }} className="hover:text-blue-400 transition-colors">Giới thiệu</Link>
               
               {/* Products Dropdown */}
               <div className="relative" ref={dropdownRef}>
@@ -62,7 +62,7 @@ export default function Header() {
                   onClick={() => setDropdownOpen((open) => !open)}
                   className="text-slate-300 hover:text-blue-400 transition-colors flex items-center gap-1"
                 >
-                  Sản phẩm
+                  SẢN PHẨM
                   <ChevronDown className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
                 </button>
                 
@@ -87,8 +87,7 @@ export default function Header() {
                 )}
               </div>
 
-              <a href="#projects" className="text-slate-300 hover:text-blue-400 transition-colors">Dự án</a>
-              <a href="#contact" className="text-slate-300 hover:text-blue-400 transition-colors">Liên hệ</a>
+            <Link to={{ pathname: '/', hash: '#contact' }} className="text-slate-300 hover:text-blue-400 transition-colors">Liên hệ</Link>
             </div>
 
             <div className="flex items-center gap-4 justify-end">
@@ -125,10 +124,10 @@ export default function Header() {
         <div className="fixed inset-0 z-40 bg-[#0a192f] pt-24 px-6 md:hidden">
           <div className="flex flex-col gap-6 text-xl font-medium">
             <Link to="/" onClick={() => setMobileMenuOpen(false)} className="text-slate-300 hover:text-blue-400 transition-colors">Trang chủ</Link>
-            <a href="#about" onClick={() => setMobileMenuOpen(false)} className="text-slate-300 hover:text-blue-400 transition-colors">Giới thiệu</a>
+            <Link to={{ pathname: '/', hash: '#about' }} onClick={() => setMobileMenuOpen(false)} className="text-slate-300 hover:text-blue-400 transition-colors">Giới thiệu</Link>
             
             <div className="flex flex-col gap-4">
-              <div className="text-slate-500 text-sm uppercase tracking-widest font-bold">Sản phẩm</div>
+              <div className="text-slate-500 text-sm uppercase tracking-widest font-bold">SẢN PHẨM</div>
               {categoriesData.map((category) => (
                 <Link 
                   key={category.id}
@@ -148,8 +147,7 @@ export default function Header() {
               </Link>
             </div>
 
-            <a href="#projects" onClick={() => setMobileMenuOpen(false)} className="text-slate-300 hover:text-blue-400 transition-colors">Dự án</a>
-            <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="text-slate-300 hover:text-blue-400 transition-colors">Liên hệ</a>
+            <Link to={{ pathname: '/', hash: '#contact' }} onClick={() => setMobileMenuOpen(false)} className="text-slate-300 hover:text-blue-400 transition-colors">Liên hệ</Link>
           </div>
         </div>
       )}
