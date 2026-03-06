@@ -7,6 +7,7 @@ import tranNhom from '../images/tran-nhom.png';
 import lamChanNang from '../images/lam-chan-nang.png';
 import tamOpNhom from '../images/tam-op-nhom.png';
 import tranSoiKhoang from '../images/tran-soi-khoang.png';
+import imageLam132s from '../images/lam-chan-nang-132s-sun-louver.jpg';
 
 const categoryImages: Record<string, string> = {
   'tran-nhom': tranNhom,
@@ -18,28 +19,17 @@ const categoryImages: Record<string, string> = {
 const productsData: Record<string, { id: string; name: string; image: string }[]> = {
   'tran-nhom': [  
     { id: 'tran-nhom-clip-in', name: 'Trần nhôm Clip-in', image: tranNhomClipin },
-    { id: 'tran-nhom-lay-in', name: 'Trần nhôm Lay-in', image: 'https://picsum.photos/seed/t2/400/300' },
-    { id: 'tran-nhom-cell-caro', name: 'Trần nhôm Cell (Caro)', image: 'https://picsum.photos/seed/t3/400/300' },
   ],
   'lam-nhom-chan-nang': [
-    { id: 'lam-chan-nang-132s-sun-louver', name: 'Lam chắn nắng 132S – Sun Louver', image: 'https://picsum.photos/seed/l1/400/300' },
-    { id: 'lam-chan-nang-85c-sun-louver', name: 'Lam chắn nắng 85C – Sun Louver', image: 'https://picsum.photos/seed/l2/400/300' },
-    { id: 'lam-chan-nang-aeroscreen-sun-louver', name: 'Lam chắn nắng Aeroscreen – Sun Louver', image: 'https://picsum.photos/seed/l3/400/300' },
-    { id: 'lam-chan-nang-asc-p150-sun-louver', name: 'Lam chắn nắng ASC P150 – Sun Louver', image: 'https://picsum.photos/seed/l4/400/300' },
-    { id: 'lam-chan-nang-az-sun-louver', name: 'Lam chắn nắng AZ – Sun Louver', image: 'https://picsum.photos/seed/l5/400/300' },
-    { id: 'lam-chan-nang-dau-dan-aerobrise', name: 'Lam chắn nắng đầu đạn Aerobrise', image: 'https://picsum.photos/seed/l6/400/300' },
-    { id: 'lam-chan-nang-hinh-thoi-aerofoil', name: 'Lam chắn nắng hình thoi Aerofoil', image: 'https://picsum.photos/seed/l7/400/300' },
-    { id: 'lam-chan-nang-hop-chu-nhat', name: 'Lam chắn nắng hộp chữ nhật', image: 'https://picsum.photos/seed/l8/400/300' },
-    { id: 'lam-chan-nang-la-lieu', name: 'Lam chắn nắng lá liễu', image: 'https://picsum.photos/seed/l9/400/300' },
-    { id: 'lam-nhom-chan-nang-85r', name: 'Lam nhôm chắn nắng 85R', image: 'https://picsum.photos/seed/l10/400/300' },
+    { id: 'lam-chan-nang-132s-sun-louver', name: 'Lam chắn nắng 132S – Sun Louver', image: imageLam132s }
   ],
   'tam-op-nhom': [
-    { id: 'tam-op-nhom-dac-solid-panel', name: 'Tấm ốp nhôm đặc Solid Panel', image: 'https://picsum.photos/seed/o1/400/300' },
-    { id: 'tam-op-nhom-duc-lo', name: 'Tấm ốp nhôm đục lỗ', image: 'https://picsum.photos/seed/o2/400/300' },
+    //{ id: 'tam-op-nhom-dac-solid-panel', name: 'Tấm ốp nhôm đặc Solid Panel', image: 'https://picsum.photos/seed/o1/400/300' },
+    //{ id: 'tam-op-nhom-duc-lo', name: 'Tấm ốp nhôm đục lỗ', image: 'https://picsum.photos/seed/o2/400/300' },
   ],
   'tran-soi-khoang': [
-    { id: 'tran-soi-khoang-tieu-am', name: 'Trần sợi khoáng tiêu âm', image: 'https://picsum.photos/seed/s1/400/300' },
-    { id: 'tran-soi-khoang-chong-am', name: 'Trần sợi khoáng chống ẩm', image: 'https://picsum.photos/seed/s2/400/300' },
+    //{ id: 'tran-soi-khoang-tieu-am', name: 'Trần sợi khoáng tiêu âm', image: 'https://picsum.photos/seed/s1/400/300' },
+    //{ id: 'tran-soi-khoang-chong-am', name: 'Trần sợi khoáng chống ẩm', image: 'https://picsum.photos/seed/s2/400/300' },
   ]
 };
 
@@ -184,7 +174,7 @@ export default function Category() {
                     </Link>
                     <div className="mt-auto">
                       <Link to={`/product/${product.id}`} className="inline-flex items-center justify-center w-full gap-2 bg-slate-800 hover:bg-blue-600 text-white px-4 py-3 rounded-lg font-medium transition-colors text-sm uppercase tracking-wider">
-                        Shop Now
+                        Chi tiết
                       </Link>
                     </div>
                   </div>

@@ -1,9 +1,60 @@
 import { ChevronRight, Download, MessageCircle, FileText, Image as ImageIcon } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 import structureLam132s from '../images/cau-tao-lam-132s.png';
+import tranNhomClipin from '../images/tran-nhom-clip-in.png';
 import imageLam132s from '../images/lam-chan-nang-132s-sun-louver.jpg';
+import tranNhomClipinCauTao from '../images/tran-nhom-clip-in-cau-tao.png';
 
 const productDetails: Record<string, any> = {
+  'tran-nhom-clip-in': {
+    name: 'Trần nhôm Clip-in',
+    category: 'Trần nhôm',
+    categorySlug: 'tran-nhom',
+    description: 'Giải pháp trần kim loại phẳng, kín khít – thẩm mỹ cao và dễ bảo trì.',
+    longDescription: 'Trần nhôm Clip-in là hệ trần treo kín dạng panel, lắp đặt bằng cách cài tấm lên khung xương chuyên dụng giúp bề mặt liền mạch, gọn gàng và hiện đại. Hệ thống phù hợp cho các không gian cần tính thẩm mỹ cao, kiểm soát vệ sinh tốt và bảo trì thuận tiện. Tấm trần có thể tháo lắp từng panel, dễ tiếp cận hệ thống kỹ thuật phía trên khi cần kiểm tra hoặc thay thế.',
+    image: tranNhomClipin,
+    structureImage: tranNhomClipinCauTao,
+    features: [
+      'Bề mặt phẳng, kín khít, tạo cảm giác không gian sạch và hiện đại.',
+      'Lắp đặt nhanh bằng cơ cấu clip-in, dễ tháo lắp từng tấm.',
+      'Không lộ khung xương, phù hợp các không gian yêu cầu thẩm mỹ cao.',
+      'Khả năng chống ẩm, chống ăn mòn và độ bền tốt trong môi trường trong nhà.',
+      'Dễ vệ sinh, bảo trì và thay thế cục bộ khi cần.'
+    ],
+    specifications: [
+      { label: 'Tên sản phẩm', value: 'Trần nhôm Clip-in' },
+      { label: 'Kích thước phổ biến', value: '300x300, 600x600 (mm)' },
+      { label: 'Chiều dày tấm', value: '0.5 – 0.7 (mm)' },
+      { label: 'Vật liệu chính', value: 'Hợp kim nhôm' },
+      { label: 'Bề mặt hoàn thiện', value: 'Sơn tĩnh điện / PVDF' },
+      { label: 'Hệ khung treo', value: 'Khung cài Clip-in chuyên dụng' }
+    ],
+    standards: [
+      { label: 'Hệ thống quản lý', value: 'ISO 9001-2015' },
+      { label: 'Tiêu chuẩn vật liệu', value: 'ASTM B209/B209M' },
+      { label: 'Tiêu chuẩn lớp sơn phủ', value: 'ASTM D3359' }
+    ],
+    colors: [
+      { code: 'AUS 3311', name: 'Gray silver', hex: '#C7C7C7' },
+      { code: 'RAL 9016', name: 'White', hex: '#F6F6F6' },
+      { code: 'RAL 7022', name: 'Gray', hex: '#4B4D4B' },
+      { code: 'AUS 9011', name: 'Black', hex: '#0A0A0A' },
+      { code: 'AUS 1567', name: 'Brown', hex: '#4B3621' }
+    ],
+    applications: 'Phù hợp cho văn phòng, hành lang, khu thương mại, bệnh viện, trường học và các không gian nội thất cần bề mặt trần phẳng – kín – dễ vệ sinh.',
+    structureDetails: [
+      { label: 'Tấm trần nhôm', value: 'Clip-in (0.5–0.7mm)' },
+      { label: 'Khung xương chính', value: 'Khung Clip-in chuyên dụng' },
+      { label: 'Ty treo', value: 'Ty ren M6/M8' },
+      { label: 'Khoảng cách treo', value: 'Theo thiết kế' }
+    ],
+    links: {
+      quote: 'https://pcfsolution.com.vn/wp-content/uploads/tai-lieu/BANG-BAO-GIA-PCF-SOLUTION-MOI_v5.8.pdf',
+      zalo: 'https://zalo.me/0904662600',
+      technical: 'https://pcfsolution.com.vn/wp-content/uploads/tai-lieu/Trannhom-Clipin-Tai-lieu-ky-thuat.pdf',
+      autocad: 'https://pcfsolution.com.vn/san-pham/tran-nhom-clip-in/#signup-link'
+    }
+  },
   'lam-chan-nang-132s-sun-louver': {
     name: 'Lam chắn nắng 132S – Sun Louver',
     category: 'Lam nhôm chắn nắng',
@@ -188,7 +239,7 @@ export default function ProductDetail() {
       <div className="max-w-7xl mx-auto px-6 mt-6">
         <div className="grid lg:grid-cols-2 gap-6 mb-10 items-stretch">
           {/* Product Image */}
-          <div className="rounded-2xl overflow-hidden border border-slate-800 bg-[#061121] h-full">
+          <div className={`rounded-2xl overflow-hidden border border-slate-800 bg-[#061121] h-full self-stretch ${activeProductId === 'tran-nhom-clip-in' ? 'flex items-center justify-center' : ''}`}>
             <img 
               src={product.image} 
               alt={product.name} 
@@ -198,7 +249,7 @@ export default function ProductDetail() {
           </div>
 
           {/* Product Info */}
-          <div>
+          <div className="h-full flex flex-col self-stretch">
             <h1 className="text-3xl md:text-4xl font-bold text-white mb-3">{product.name}</h1>
             <p className="text-lg text-blue-400 font-medium mb-4">{product.description}</p>
             <p className="text-slate-400 leading-snug mb-4">{product.longDescription}</p>
