@@ -134,7 +134,7 @@ export default function Home() {
                 <div>
                   <div className="text-sm text-slate-500 uppercase tracking-wider mb-2">Lĩnh vực</div>
                   <div className="text-white font-medium">
-                    Trần nhôm, lam chắn nắng, tấm ốp nhôm & vật liệu hoàn thiện kiến trúc
+                    Trần nhôm, lam chắn nắng, tấm ốp nhôm, sàn gỗ, vách ALC Panel chống cháy & vật liệu hoàn thiện kiến trúc
                   </div>
                 </div>
               </div>
