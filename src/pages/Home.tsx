@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import pcfAbout from '../images/about.png';
 import tranNhom from '../images/tran-nhom.png';
 import tamOpNhom from '../images/tam-op-nhom.png';
+import sanGo from '../images/san/sango.jpg';
 import proj1 from '../images/vach-tam-op-nhom/z7842251430227_e4da556614c591becdafc531c048e6a7.jpg';
 import proj2 from '../images/trannhom/caro/z7842248671308_eab116e291dbd180a0bf5513228ed718.jpg';
 import proj3 from '../images/san/thicongsanepoxy.jpg';
@@ -15,7 +16,7 @@ const products = [
     title: 'Sàn',
     subtitle: 'FLOORING SOLUTION',
     description: 'Sàn PCF SOLUTION là dòng sản phẩm sàn công nghiệp và dân dụng cao cấp, được sản xuất từ vật liệu chất lượng cao với độ bền vượt trội. Bề mặt được xử lý chống trơn trượt, chống mài mòn và dễ vệ sinh, phù hợp cho các không gian thương mại, công nghiệp và dân dụng hiện đại.',
-    image: 'https://picsum.photos/seed/flooring/800/600',
+    image: sanGo,
     link: '/category/san',
   },
   {
@@ -194,7 +195,7 @@ export default function Home() {
                       referrerPolicy="no-referrer"
                     />
                   </div>
-                  <div className="absolute top-4 left-4 md:-left-8 md:-top-8 text-6xl md:text-8xl font-black text-transparent" style={{ WebkitTextStroke: '2px rgba(255,255,255,0.1)' }}>
+                  <div className="absolute inset-0 flex items-center justify-center text-7xl md:text-9xl font-black text-transparent select-none pointer-events-none" style={{ WebkitTextStroke: '2px rgba(255,255,255,0.12)' }}>
                     {product.id}
                   </div>
                 </div>
