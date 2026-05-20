@@ -3,46 +3,44 @@ import { ArrowRight, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import pcfAbout from '../images/about.png';
 import tranNhom from '../images/tran-nhom.png';
-import lamChanNang from '../images/lam-chan-nang.png';
 import tamOpNhom from '../images/tam-op-nhom.png';
-import tranSoiKhoang from '../images/tran-soi-khoang.png';
+import proj1 from '../images/vach-tam-op-nhom/z7842251430227_e4da556614c591becdafc531c048e6a7.jpg';
+import proj2 from '../images/trannhom/caro/z7842248671308_eab116e291dbd180a0bf5513228ed718.jpg';
+import proj3 from '../images/san/thicongsanepoxy.jpg';
+import proj4 from '../images/trannhom/caro/tran-nhom-cell-caro-2-768x467.png';
 
 const products = [
   {
+    id: 'san',
+    title: 'Sàn',
+    subtitle: 'FLOORING SOLUTION',
+    description: 'Sàn PCF SOLUTION là dòng sản phẩm sàn công nghiệp và dân dụng cao cấp, được sản xuất từ vật liệu chất lượng cao với độ bền vượt trội. Bề mặt được xử lý chống trơn trượt, chống mài mòn và dễ vệ sinh, phù hợp cho các không gian thương mại, công nghiệp và dân dụng hiện đại.',
+    image: 'https://picsum.photos/seed/flooring/800/600',
+    link: '/category/san',
+  },
+  {
     id: 'tran-nhom',
-    title: 'Trần nhôm',
+    title: 'Trần Nhôm',
     subtitle: 'ALUMINUM CEILING',
     description: 'Trần nhôm PCF SOLUTION (Aluminum Ceiling) là dòng trần nhôm cao cấp được sản xuất từ hợp kim nhôm chất lượng cao, nổi bật với độ bền, tính thẩm mỹ và khả năng chống oxy hóa vượt trội. Bề mặt được xử lý sơn tĩnh điện hoặc phủ lớp PE/PVDF, giúp sản phẩm luôn bền màu, chống ăn mòn và chống ẩm mốc, thích ứng tốt với nhiều điều kiện môi trường.',
     image: tranNhom,
+    link: '/category/tran-nhom',
   },
   {
-    id: 'lam-nhom-chan-nang',
-    title: 'Lam chắn nắng',
-    subtitle: 'SUN LOUVER',
-    description: 'Lam nhôm chắn nắng PCF SOLUTION (Aluminum Sun Louver) là hệ thanh lam được sản xuất từ hợp kim nhôm cao cấp, nổi bật với độ bền vượt trội, tính thẩm mỹ tinh tế và khả năng chống oxy hóa ưu việt. Bề mặt sản phẩm được xử lý sơn tĩnh điện hoặc phủ lớp PE/PVDF, giúp lam luôn bền màu, chống ăn mòn và thích ứng với nhiều điều kiện môi trường.',
-    image: lamChanNang,
-  },
-  {
-    id: 'tam-op-nhom',
-    title: 'Tấm ốp nhôm',
-    subtitle: 'ALUMINUM FACADE',
-    description: 'Tấm ốp nhôm mặt dựng PCF SOLUTION (Aluminum Solid Panel) được sản xuất từ hợp kim nhôm cao cấp 3003 H24, là dòng tấm ốp nhôm đặc có độ bền cao nhưng trọng lượng nhẹ, mang đến giải pháp hoàn thiện kiến trúc hiện đại, sang trọng. Bề mặt được xử lý sơn tĩnh điện hoặc phủ lớp PE/PVDF, giúp tấm ốp chống ăn mòn, chống tia UV và bền màu vượt trội trong mọi điều kiện thời tiết.',
+    id: 'vach-tam-op-nhom',
+    title: 'Vách Tấm Ốp Nhôm',
+    subtitle: 'ALUMINUM CLADDING',
+    description: 'Vách tấm ốp nhôm PCF SOLUTION (Aluminum Cladding Panel) được sản xuất từ hợp kim nhôm cao cấp 3003 H24, là dòng tấm ốp nhôm đặc có độ bền cao nhưng trọng lượng nhẹ, mang đến giải pháp hoàn thiện kiến trúc hiện đại, sang trọng. Bề mặt được xử lý sơn tĩnh điện hoặc phủ lớp PE/PVDF, giúp tấm ốp chống ăn mòn, chống tia UV và bền màu vượt trội trong mọi điều kiện thời tiết.',
     image: tamOpNhom,
+    link: '/category/vach-tam-op-nhom',
   },
-  {
-    id: 'tran-soi-khoang',
-    title: 'Trần sợi khoáng',
-    subtitle: 'MINERAL FIBER CEILING',
-    description: 'Trần sợi khoáng PCF SOLUTION (Mineral Fiber Ceiling sử dụng hệ khung trần thả T-shaped, giữ chắc hai gờ đối diện của tấm vào khung chính, giúp bề mặt trần luôn thẳng hàng và cân bằng. Với trọng lượng nhẹ, khả năng cách âm – tiêu âm vượt trội, giảm nhiệt và kháng lửa hiệu quả, đây là giải pháp tối ưu cho không gian hiện đại.',
-    image: tranSoiKhoang,
-  }
 ];
 
 const projects = [
-  { name: 'Nhà ga T3 sân bay Tân Sơn Nhất', image: 'https://picsum.photos/seed/p1/600/400' },
-  { name: 'Bảo tàng lịch sử quân sự Việt Nam', image: 'https://picsum.photos/seed/p2/600/400' },
-  { name: 'Trụ sở tập đoàn Viettel', image: 'https://picsum.photos/seed/p3/600/400' },
-  { name: 'Sân bay quốc tế Cam Ranh', image: 'https://picsum.photos/seed/p4/600/400' },
+  { name: 'Vách tấm ốp nhôm đục lỗ trang trí – Mặt đứng công trình thương mại', image: proj1 },
+  { name: 'Trần nhôm Cell Caro – Không gian văn phòng hiện đại', image: proj2 },
+  { name: 'Sàn Epoxy công nghiệp – Nhà xưởng sản xuất', image: proj3 },
+  { name: 'Trần nhôm Cell Caro – Trung tâm thương mại', image: proj4 },
 ];
 
 export default function Home() {
@@ -207,7 +205,7 @@ export default function Home() {
                   <p className="text-slate-400 leading-relaxed mb-8">
                     {product.description}
                   </p>
-                  <Link to={`/product/${product.id}`} className="inline-flex items-center gap-2 text-white font-medium hover:text-blue-400 transition-colors group">
+                  <Link to={product.link} className="inline-flex items-center gap-2 text-white font-medium hover:text-blue-400 transition-colors group">
                     Xem chi tiết
                     <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                   </Link>

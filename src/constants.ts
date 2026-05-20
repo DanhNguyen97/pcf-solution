@@ -1,6 +1,5 @@
 export const categoriesData = [
-  { id: 'tran-nhom', name: 'Trần nhôm', count: 1 },
-  { id: 'lam-nhom-chan-nang', name: 'Lam nhôm chắn nắng', count: 1 },
-  { id: 'tam-op-nhom', name: 'Tấm ốp nhôm', count: 0 },
-  { id: 'tran-soi-khoang', name: 'Trần sợi khoáng', count: 0 },
+  { id: 'san', name: 'Sàn', count: 4 },
+  { id: 'tran-nhom', name: 'Trần Nhôm', count: 3 },
+  { id: 'vach-tam-op-nhom', name: 'Vách Tấm Ốp Nhôm', count: 1 },
 ];
