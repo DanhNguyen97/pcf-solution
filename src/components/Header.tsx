@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { categoriesData } from '../constants';
-import logoWhite from '../images/logo/logo_white.jpg';
+import logoWhite from '../images/logo/logo_nobackground.png';
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,7 +43,7 @@ export default function Header() {
         <div className="w-full px-8 xl:px-12">
           <div className="hidden md:flex items-center gap-10">
             <Link to="/" className="text-xl font-bold tracking-tight text-white flex items-center gap-3">
-              <img src={logoWhite} alt="PCF SOLUTION" className="h-16 w-auto object-contain" />
+              <img src={logoWhite} alt="PCF SOLUTION" className="h-18 w-auto object-contain" />
               <div className="leading-none">
                 <div className="text-white font-bold text-lg">PCF Solutions</div>
                 <div className="text-[9px] text-slate-400 uppercase tracking-[0.28em] mt-1">Architectural Product</div>

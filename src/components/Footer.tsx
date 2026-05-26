@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { categoriesData } from '../constants';
-import logoWhite from '../images/logo/logo_white.jpg';
+import logoWhite from '../images/logo/logo_nobackground.png';
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center gap-3 mb-6">
-              <img src={logoWhite} alt="PCF SOLUTION" className="h-12 w-auto object-contain" />
+              <img src={logoWhite} alt="PCF SOLUTION" className="h-18 w-auto object-contain" />
               <div className="leading-none">
                 <div className="text-white font-bold text-xl">PCF Solutions</div>
                 <div className="text-[9px] text-slate-400 uppercase tracking-[0.28em] mt-1">Architectural Product</div>
