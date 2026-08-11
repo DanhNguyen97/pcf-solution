@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'motion/react';
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronRight, Phone, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import pcfAbout from '../images/about.png';
 import tranNhom from '../images/tran-nhom.png';
@@ -226,6 +226,69 @@ export default function Home() {
               <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Link>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-24 bg-[#061121]">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-sm font-bold tracking-widest text-blue-400 uppercase mb-4">Liên hệ</h2>
+            <h3 className="text-4xl md:text-5xl font-bold text-white">Kết nối với chúng tôi</h3>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="space-y-8"
+            >
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-blue-600/20 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-blue-400" />
+                </div>
+                <div>
+                  <div className="text-xs text-slate-500 uppercase tracking-wider mb-1">Số điện thoại / Zalo</div>
+                  <a href="tel:0932786216" className="text-white font-semibold text-lg hover:text-blue-400 transition-colors">0932 786 216</a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 rounded-xl bg-blue-600/20 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-blue-400" />
+                </div>
+                <div>
+                  <div className="text-xs text-slate-500 uppercase tracking-wider mb-1">Địa chỉ</div>
+                  <div className="text-white font-semibold">Số 13B Đường số 12, Phường An Khánh, TP. Hồ Chí Minh, Việt Nam</div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex items-center justify-center"
+            >
+              <a
+                href="https://zalo.me/0932786216"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 bg-[#0068FF] hover:bg-[#0058DD] text-white px-10 py-5 rounded-2xl font-semibold text-lg transition-colors"
+              >
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo" className="w-7 h-7" />
+                Liên hệ qua Zalo
+              </a>
+            </motion.div>
+          </div>
         </div>
       </section>
 

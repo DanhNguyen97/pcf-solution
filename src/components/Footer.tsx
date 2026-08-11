@@ -36,6 +36,10 @@ export default function Footer() {
           <div>
             <h5 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Liên hệ</h5>
             <ul className="space-y-4 text-slate-400">
+              <li className="text-xs text-slate-500 uppercase tracking-wider">Nhân viên Sale</li>
+              <li>
+                <a href="tel:0932786216" className="hover:text-blue-400 transition-colors">0932 786 216</a>
+              </li>
               <li>VPĐD Hồ Chí Minh</li>
             </ul>
           </div>
